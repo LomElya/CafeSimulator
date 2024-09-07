@@ -18,9 +18,4 @@ public class TestStartup : MonoBehaviour
     {
         _input.Register(_playerMovement);
     }
-
-    private void OnDestroy()
-    {
-        _input.Unregister();
-    }
 }

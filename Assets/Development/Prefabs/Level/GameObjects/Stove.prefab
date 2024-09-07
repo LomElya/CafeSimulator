@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _trigger: {fileID: 4119213340041756749}
   _timerView: {fileID: 2028048381182828841}
-  _interactionTime: 2
+  _interactionTime: 4
   _stackableProvider: {fileID: 7206030289154201337}
   _maxCount: 1
 --- !u!1 &9017601102865523432

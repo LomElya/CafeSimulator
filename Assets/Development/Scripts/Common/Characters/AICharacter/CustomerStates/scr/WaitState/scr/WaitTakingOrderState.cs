@@ -15,6 +15,7 @@ public class WaitTakingOrderState : WaitState
 
     protected override IEnumerator Leave()
     {
+        _desk.EndTransit();
         yield return new WaitForSeconds(0.1f);
 
         LeaveState();

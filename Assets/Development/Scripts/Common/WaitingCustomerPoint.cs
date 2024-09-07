@@ -8,7 +8,7 @@ public abstract class WaitingCustomerPoint : MonoBehaviour
     public event Action Complite;
 
     protected const float NewCustomerSetDelay = 1.0f;
-    
+
     [SerializeField] protected Transform _customerWaitPoint;
     [SerializeField] private CustomerTrigger _customerTrigger;
 
@@ -36,10 +36,14 @@ public abstract class WaitingCustomerPoint : MonoBehaviour
         return _customerWaitPoint;
     }
 
+    public void EndTransit()
+    {
+        Free = true;
+    }
+
     public void Leave()
     {
         SetActive(false);
-        Free = true;
         OnLeave();
         BecameFree?.Invoke();
     }

@@ -34,6 +34,7 @@ public abstract class WaitState : CustomerState
         {
             _movement.Look(-waitPoint.forward);
             _movement.Stop();
+            OnCompleateMove();
         });
     }
 
@@ -46,6 +47,7 @@ public abstract class WaitState : CustomerState
     protected void StartLeave() => _updateHandler.startCoroutine(Leave());
     protected void StopLeave() => _updateHandler.stopCoroutine(Leave());
     protected void LeaveState() => OnLeaveState?.Invoke();
+    protected virtual void OnCompleateMove() { }
 
     protected abstract IEnumerator Leave();
 

@@ -34,6 +34,25 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &-3922217535674031332
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CashDesk
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 7128389e88418714da7eda543011605c
+  m_Children: []
+  m_Volume: 7b985b0321599f14ea42fc1b77b25193
+  m_Pitch: 5e806db43a8afaf4883e97a16c91e7cf
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 1895177936374981817}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &-2551137350543309185
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -111,6 +130,8 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: f38613ffcc2b7dd459a7ba86983956ac
     name: AddToStackPitch
+  - guid: 7b985b0321599f14ea42fc1b77b25193
+    name: CashDeskPitch
   - guid: 2d5af8129eaa4474caba1202cb5ce920
     name: MoneyPitch
   - guid: 33d317612e6e74449b70055cde4fefd3
@@ -126,6 +147,7 @@ AudioMixerController:
     - 00ba79ba4f20a4643932b67692e93262
     - 31011fd92a3355e4685b7a1c8a4ecde7
     - aff089006fd880e448ce0bf72cbd19b9
+    - 7128389e88418714da7eda543011605c
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -187,6 +209,7 @@ AudioMixerSnapshotController:
     ae000f02abf0a0e4e8a2d6c0a69e916c: 8336
     2d5af8129eaa4474caba1202cb5ce920: 1
     12a689e2d4d9d2a449baec31b5190987: 1
+    7b985b0321599f14ea42fc1b77b25193: 10
     0d325123c504dd24296074969d907355: 0.882
     2ba86a33ed711954aaee7d657ad843f4: 6.6
     0bfd47433add59d43b3abcf3f8ebc3c4: 22000
@@ -274,6 +297,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &1895177936374981817
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 9dc67999cb4e76046b906bf1638fa595
+  m_EffectName: Attenuation
+  m_MixLevel: fb52585cdbde06343827bc62659afda9
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &2097385134451155515
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -348,6 +385,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 1249902889352738663}
   - {fileID: -6620563345112539660}
+  - {fileID: -3922217535674031332}
   - {fileID: -1266048335128542176}
   - {fileID: -2551137350543309185}
   m_Volume: 112359e4a44a7c9438880013de60e3c5

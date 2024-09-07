@@ -4,7 +4,7 @@ public class Wallet
 {
     public event Action<int> BalanceChanged;
 
-    public int ValueMoney = 10;
+    public int ValueMoney = 0;
     public bool HasMoney => ValueMoney > 0;
 
     public void AddMoney(int value)

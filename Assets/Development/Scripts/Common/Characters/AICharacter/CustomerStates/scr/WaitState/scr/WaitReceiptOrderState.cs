@@ -16,6 +16,7 @@ public class WaitReceiptOrderState : WaitState
 
     protected override IEnumerator Leave()
     {
+        _table.EndTransit();
         yield return new WaitForSeconds(1.5f);
 
         foreach (Stackable stackable in _table.TakeAllItems())

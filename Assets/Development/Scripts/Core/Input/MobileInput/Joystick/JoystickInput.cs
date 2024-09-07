@@ -63,7 +63,7 @@ namespace InputSystem
         }
 
         private void OnLateUpdate() => LastFrameMoving = Moving;
-        private void SetActive(bool isActive) => this.gameObject?.SetActive(isActive);
+        private void SetActive(bool isActive) => gameObject?.SetActive(isActive);
 
         private void Subscrive()
         {
@@ -75,6 +75,11 @@ namespace InputSystem
         {
             _updateHandler.RemoveUpdate(OnUpdate);
             _updateHandler.RemoveLateUpdate(OnLateUpdate);
+        }
+
+        private void OnDestroy()
+        {
+            Unregister();
         }
     }
 }
