@@ -18,9 +18,9 @@ public class WaitTakingOrderState : WaitState
         _desk.EndTransit();
         yield return new WaitForSeconds(0.1f);
 
-        LeaveState();
         _desk.Leave();
         StopLeave();
+        LeaveState();
     }
 
     protected override void Subscribe() => _desk.Complite += OnCompliteOrder;

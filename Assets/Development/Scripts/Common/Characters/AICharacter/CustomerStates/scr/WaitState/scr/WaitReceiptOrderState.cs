@@ -25,9 +25,9 @@ public class WaitReceiptOrderState : WaitState
             yield return new WaitForSeconds(0.25f);
         }
 
-        LeaveState();
         _table.Leave();
         StopLeave();
+        LeaveState();
     }
 
     protected override void Subscribe() => _customer.PurchaseList.BecameEmpty += OnCompliteOrder;
